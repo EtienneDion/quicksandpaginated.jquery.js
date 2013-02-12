@@ -1,11 +1,11 @@
 {
     "name": "quicksandpaginated",
     "title": "Jquery Quicksand Paginated",
-    "description": "quicksandpaginated.jquery.js",
+    "description": "quicksandpaginated.jquery.js require jquery.quicksand.js -> https://github.com/razorjack/quicksand/tree/v1.3",
     "keywords": [
         "stackNav"
     ],
-    "version": "0.0.2",
+    "version": "0.0.3",
     "author": {
         "name": "Etienne Dion",
         "url": "http://www.etiennedion.com"
@@ -28,7 +28,6 @@
     "docs": "https://github.com/EtienneDion/quicksandpaginated.jquery.js",
     "download": "https://github.com/EtienneDion/quicksandpaginated.jquery.js",
     "dependencies": {
-        "jquery": ">=1.9",
-	"jquery.quicksand.js":"https://github.com/razorjack/quicksand/tree/v1.3"
+        "jquery": ">=1.9"
     }
 }
