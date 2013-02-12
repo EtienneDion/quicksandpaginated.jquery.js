@@ -15,6 +15,7 @@
 		var configs = {
 			wrapper: ".portfolioListing",
 			container: '.fn-portfolioCarrousel',
+			containerWidth:745,
 			thumbs: "article",
 			filtersContainer: ".portfolio-filters",
 			filters: "li",
@@ -41,6 +42,7 @@
 			
 			var settings = {
 				container: '#portfolio-list'+index,
+				containerWidth: configs.containerWidth,
 				thumbs: configs.thumbs, //element tag name only no id or class selector
 				masterListcontainer: "#"+$this.data("rel-list"),
 				filtersContainer: '#portfolio-filters'+index,
@@ -62,7 +64,7 @@
         var $self = $(this);
        
 		function quickSandPaginated( settings ){
-			console.log(settings);
+			
 			//TODO refactor this
 			$(settings.container).append("<"+settings.thumbs+"><a><img width="+settings.thumbsWidth+" height="+settings.thumbsHeight+"/></a></"+settings.thumbs+">");
 			
@@ -78,10 +80,12 @@
 			}
 			
 			// Necessary data
-			var thumb_space_x = $(settings.container).find(settings.thumbs).width() + parseInt($(settings.container).find(settings.thumbs).css('margin-right'));
+			
 			var portfolio_width = $(settings.container).width();
-			var thumbs_per_row = Math.floor(portfolio_width / thumb_space_x);
+			var thumbs_per_row = Math.floor(portfolio_width / settings.thumbsWidth);
 			var max_thumbs_per_page = thumbs_per_row * max_thumb_rows;
+			
+			console.log($(settings.container+" "+settings.thumbs),"portfolio_width",portfolio_width, "thumbs_per_row", thumbs_per_row, "max_thumbs_per_page",max_thumbs_per_page);
 			
 			// Update thumbnails and controls based on given filter and/or page number
 			var portfolio_filtered_urls = [];
@@ -264,7 +268,7 @@
                 $(this).attr('data-id', index);
             });
 
-			updatePortfolio(false, 1, true); 
+			updatePortfolio(false, 1, false); 
 			portfolio_loaded = true;
 		
 			// Category filter click
@@ -306,7 +310,7 @@
 					var new_page = $(this).attr('data-page');
 					
 					
-					updatePortfolio(current_filter, new_page);
+					updatePortfolio(current_filter, new_page, false);
 						
 				}
 		

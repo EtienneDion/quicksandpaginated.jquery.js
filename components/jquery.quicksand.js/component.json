@@ -1,0 +1,8 @@
+{
+  "name": "jquery.quicksand.js",
+  "version": "1.2.2",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/razorjack/quicksand.git"
+  }
+}
