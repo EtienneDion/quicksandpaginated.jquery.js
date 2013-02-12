@@ -1,6 +1,6 @@
 {
   "name": "quicksandpaginated",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "main": ["quicksandpaginated.jquery.js"],
   "dependencies": {
     "jquery": ">=1.9",

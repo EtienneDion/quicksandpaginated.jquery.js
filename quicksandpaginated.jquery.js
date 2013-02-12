@@ -4,7 +4,7 @@
 *	quicksandpaginated.jquery.js
 *	QuickSand Paginated
 *
-*	V. 0.0.5
+*	V. 0.0.6
 *   Needs a lot of refactoring...
 *   TODO: remove all id work with class and make it work with multiply easyly with class
 */
