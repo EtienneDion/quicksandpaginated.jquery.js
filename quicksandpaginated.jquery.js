@@ -4,11 +4,11 @@
 *	quicksandpaginated.jquery.js
 *	QuickSand Paginated
 *
-*	V. 0.0.1
+*	V. 0.0.5
 *   Needs a lot of refactoring...
 *   TODO: remove all id work with class and make it work with multiply easyly with class
 */
-																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																									
+																	
 (function($){
     $.fn.quicksandpaginated = function( options ){
 		
@@ -327,7 +327,7 @@
 		}
 	}
 
-})(jQuery)
+})(jQuery);
 
 
 
