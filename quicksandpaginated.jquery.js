@@ -4,7 +4,7 @@
 *	quicksandpaginated.jquery.js
 *	QuickSand Paginated
 *
-*	V. 0.0.7
+*	V. 0.0.8
 *   Needs a lot of refactoring...
 *   TODO: remove all id work with class and make it work with multiply easyly with class
 */
@@ -23,7 +23,6 @@
 			next: ".portfolio-page-next",
 			pageNumberContainer: ".portfolio-page-numbers",
 			hoverContainers: ".portfolio-thumb-overlay",
-			adjustHeight: false,
 			thumbsHeight:186,
 			thumbsWidth:248,
 			transitionSpeed:500
@@ -39,7 +38,7 @@
 			$this.find(configs.prev).attr("id", "portfolio-page-prev"+index); 
 			$this.find(configs.next).attr("id", "portfolio-page-next"+index);
 			$this.find(configs.pageNumberContainer).attr("id", "portfolio-page-numbers"+index);
-			
+			var adjustHeight = $this.find(configs.container).data("ajust-height");
 			var settings = {
 				container: '#portfolio-list'+index,
 				containerWidth: configs.containerWidth,
@@ -51,7 +50,7 @@
 				next: "#portfolio-page-next"+index,
 				pageNumberContainer: "#portfolio-page-numbers"+index,
 				hoverContainers: configs.hoverContainers,
-				adjustHeight: configs.adjustHeight,
+				adjustHeight: configs.adjustHeight || adjustHeight || false,
 				thumbsHeight:configs.thumbsHeight,
 				thumbsWidth:configs.thumbsWidth,
 				transitionSpeed:configs.transitionSpeed
@@ -67,8 +66,7 @@
 			
 			//TODO refactor this
 			$(settings.container).append("<"+settings.thumbs+"><a><img width="+settings.thumbsWidth+" height="+settings.thumbsHeight+"/></a></"+settings.thumbs+">");
-			
-			
+
 			var max_thumb_rows = $(settings.container).height()/settings.thumbsHeight; // items causing additional rows trigger pagination
 			var button_prev_disabled = true;
 			var button_next_disabled = false;
@@ -81,11 +79,11 @@
 			
 			// Necessary data
 			
-			var portfolio_width = settings.containerWidth;
+			var portfolio_width = $(settings.container).width();
 			var thumbs_per_row = Math.floor(portfolio_width / settings.thumbsWidth);
 			var max_thumbs_per_page = thumbs_per_row * max_thumb_rows;
 			
-			
+			console.log($(settings.container+" "+settings.thumbs),"portfolio_width",portfolio_width, "thumbs_per_row", thumbs_per_row, "max_thumbs_per_page",max_thumbs_per_page);
 			
 			// Update thumbnails and controls based on given filter and/or page number
 			var portfolio_filtered_urls = [];
@@ -268,7 +266,7 @@
                 $(this).attr('data-id', index);
             });
 
-			updatePortfolio(false, 1, false); 
+			updatePortfolio($(settings.filtersContainer).find('a.active').attr('data-category') || false, 1, false);
 			portfolio_loaded = true;
 		
 			// Category filter click
