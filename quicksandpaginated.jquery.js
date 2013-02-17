@@ -4,7 +4,7 @@
 *	quicksandpaginated.jquery.js
 *	QuickSand Paginated
 *
-*	V. 0.0.6
+*	V. 0.0.7
 *   Needs a lot of refactoring...
 *   TODO: remove all id work with class and make it work with multiply easyly with class
 */
@@ -23,7 +23,7 @@
 			next: ".portfolio-page-next",
 			pageNumberContainer: ".portfolio-page-numbers",
 			hoverContainers: ".portfolio-thumb-overlay",
-			adjustHeight: "dynamic",
+			adjustHeight: false,
 			thumbsHeight:186,
 			thumbsWidth:248,
 			transitionSpeed:500
@@ -69,7 +69,7 @@
 			$(settings.container).append("<"+settings.thumbs+"><a><img width="+settings.thumbsWidth+" height="+settings.thumbsHeight+"/></a></"+settings.thumbs+">");
 			
 			
-			var max_thumb_rows = 3; // items causing additional rows trigger pagination
+			var max_thumb_rows = $(settings.container).height()/settings.thumbsHeight; // items causing additional rows trigger pagination
 			var button_prev_disabled = true;
 			var button_next_disabled = false;
 			// Hide category filters if there is only one category (or none)
@@ -81,11 +81,11 @@
 			
 			// Necessary data
 			
-			var portfolio_width = $(settings.container).width();
+			var portfolio_width = settings.containerWidth;
 			var thumbs_per_row = Math.floor(portfolio_width / settings.thumbsWidth);
 			var max_thumbs_per_page = thumbs_per_row * max_thumb_rows;
 			
-			console.log($(settings.container+" "+settings.thumbs),"portfolio_width",portfolio_width, "thumbs_per_row", thumbs_per_row, "max_thumbs_per_page",max_thumbs_per_page);
+			
 			
 			// Update thumbnails and controls based on given filter and/or page number
 			var portfolio_filtered_urls = [];
