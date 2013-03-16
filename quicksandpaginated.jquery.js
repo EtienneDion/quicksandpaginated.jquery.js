@@ -4,7 +4,7 @@
 *	quicksandpaginated.jquery.js
 *	QuickSand Paginated
 *
-*	V. 0.0.8
+*	V. 0.0.9
 *   Needs a lot of refactoring...
 *   TODO: remove all id work with class and make it work with multiply easyly with class
 */
@@ -25,7 +25,8 @@
 			hoverContainers: ".portfolio-thumb-overlay",
 			thumbsHeight:186,
 			thumbsWidth:248,
-			transitionSpeed:500
+			transitionSpeed:500,
+            callback:function(c) {}
 		}
 		$.extend( configs, options );
 		
@@ -53,7 +54,8 @@
 				adjustHeight: configs.adjustHeight || adjustHeight || false,
 				thumbsHeight:configs.thumbsHeight,
 				thumbsWidth:configs.thumbsWidth,
-				transitionSpeed:configs.transitionSpeed
+				transitionSpeed:configs.transitionSpeed,
+                callback:configs.callback
 			};
 			
 			quickSandPaginated(settings);
@@ -216,7 +218,8 @@
 					$(settings.container).quicksand($(settings.container+'-temp '+settings.thumbs), {
 						duration: settings.transitionSpeed,
 						useScaling: false,
-						adjustHeight : settings.adjustHeight // causes filters/page nav to slide up/down smoothly
+						adjustHeight : settings.adjustHeight, // causes filters/page nav to slide up/down smoothly
+                        enhancement:settings.callback
 					});
 					
 				} else {
