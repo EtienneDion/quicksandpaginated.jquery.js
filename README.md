@@ -1,5 +1,5 @@
 quicksandpaginated.jquery.js
 ============================
 
-Quick Sand With Pagination
+QuickSand With Pagination
 Doc and examples will follow..
