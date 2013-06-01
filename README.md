@@ -115,6 +115,8 @@ Markup:
     
     <script src="../quicksandpaginated.jquery.js"></script>
 
+See a live example here : http://creativeda.sh/
+
 See examples in examples folder.
 
 More Doc and examples will follow...
