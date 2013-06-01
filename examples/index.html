@@ -1,0 +1,306 @@
+<!doctype html>
+<html xml:lang="en" lang="en" dir="ltr">
+<head>
+	<title>quicksandpaginated.jquery.js</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=2">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/styles.css?v=10">
+    <script src="js/modernizr.js"></script>
+</head>
+<body>
+<div class="container">
+
+    <div class="main" role="main">
+        
+        <section class="content">
+            
+            <section id="portfolio" class="portfolioListing fn-portfolioListing" data-rel-list="app-master-list">
+                <nav>
+                    <span class="title">Our Work</span>
+                    <ul class="portfolio-filters">
+                        <li><a data-category="Education">Education</a></li>
+                        <li><a data-category="Utility">Utility</a></li>
+                        <li><a data-category="Games">Games</a></li>
+                        <li><a data-category="Productivity">Productivity</a></li>
+                        <li><a data-category="Sports">Sports</a></li>
+                        <li><a data-category="Photography">Photography</a></li>
+                        <li><a class="active">All</a></li>
+                    </ul>
+                </nav>
+    
+                <div class="portfolioCarrousel fn-portfolioCarrousel" data-ajust-height="false"></div>
+    
+                <div class="portfolioCarrousel_nav_wrapper">
+                	
+                    <div class="portfolioCarrousel_nav"><!-- pagination will be added here with page number --></div>
+    
+                    <a href="#" class="carrousel_prev page-button-disabled" data-page="0"><span class="caption">Prev</span><span class="hover"></span></a>
+                    <a href="#" class="carrousel_next" data-page="2"><span class="caption">Next</span><span class="hover"></span></a>
+    
+                </div>
+    
+                <div id="app-master-list" class="hidden">
+    
+                    <article data-categories="Education Utility">
+                       <a href="#">
+                           <img width="248" height="186" src="img/dummy-portfolio-preview.jpg">
+                           <div class="preview">
+    
+                           </div>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg"  data-project-url-link="url" data-project-url-text="http://www.toyota.com">
+                               <span class="project-title">Project Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Games Sports Productivity">
+                       <a href="#">
+                           <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                           <div class="preview"></div>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Project Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Photography">
+                       <a href="#">
+                           <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                           <div class="preview"></div>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Education Photography Productivity">
+                       <a href="#">
+                           <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                           <div class="preview"></div>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Project Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>     
+    
+                       </a>
+                    </article>
+                    <article data-categories="Games Utility">
+                       <a href="#">
+                           <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                           <div class="preview"></div>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Games Education Photography Productivity">
+                       <a href="#">
+                           <div class="preview"></div>
+                           <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Project Title</span>
+                               <p class="project-details">Details2</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Games Education">
+                       <a href="#">
+                           <div class="preview"></div>
+                           <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Games">
+                       <a href="#">
+                           <div class="preview"></div>
+                           <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                               <span class="project-title">Project Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Games Sports Photography">
+                       <a href="#">
+                           <div class="preview"></div>
+                           <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                           <div class="hover"></div>
+                           <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg">
+                               <span class="project-title">Title</span>
+                               <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                               <span class="client-title">Client</span>
+                               <p class="client-details">Toyota Corporation, LLC.</p>
+                           </div>
+                       </a>
+                    </article>
+                    <article data-categories="Education Utility">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Project Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games Sports Productivity">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Photography">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Project Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Education Photography Productivity">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games Utility">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Project Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games Education Photography Productivity">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games Education">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Project Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="true" data-project-img="img/dummy-overlay.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Title</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                    <article data-categories="Games Sports Photography">
+                        <a href="#">
+                            <div class="preview"></div>
+                            <img width="248" height="186" src="img/dummy-portfolio-preview2.jpg"/>
+                            <div class="hover"></div>
+                            <div class="projectContent" data-project-has-app="false" data-project-img="img/dummy-overlay2.jpg" data-project-url-link="http://www.toyota.com" data-project-url-text="toyota.com">
+                                <span class="project-title">Last</span>
+                                <p class="project-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu est vel arcu luctus ultricies sed vel risus. Etiam vehicula ipsum sit amet libero ultricies ut tincidunt lectus malesuada. Aliquam non tellus ac tellus eleifend fermentum vel sit amet est.</p>
+                                <span class="client-title">Client</span>
+                                <p class="client-details">Toyota Corporation, LLC.</p>
+                            </div>
+                        </a>
+                    </article>
+                </div>
+    
+    
+    
+            </section>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </div>
+
+</div>
+
+
+<script src="../components/jquery/jquery.js"></script>
+<script src="../components/jquery/jquery-migrate.js"></script>
+<script src="../components/jquery.quicksand.js/jquery.quicksand.js"></script>
+<script src="../quicksandpaginated.jquery.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
