@@ -162,7 +162,7 @@
 					
 					
 					// Update thumbs and pagination controls based on current filter and page number
-					var current_filter = $('.active').attr('data-category');
+					var current_filter = $(settings.filtersContainer + ' .active').attr('data-category');
 					var new_page = $(this).attr('data-page');
 					
 					updatePortfolio(current_filter, new_page);
