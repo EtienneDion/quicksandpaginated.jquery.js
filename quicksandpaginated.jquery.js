@@ -83,7 +83,7 @@
 			
 			var portfolio_width = $(settings.container).width();
 			var thumbs_per_row = Math.floor(portfolio_width / settings.thumbsWidth);
-			var max_thumbs_per_page = thumbs_per_row * max_thumb_rows;
+			var max_thumbs_per_page = Math.floor(thumbs_per_row * max_thumb_rows);
 			
 			console.log($(settings.container+" "+settings.thumbs),"portfolio_width",portfolio_width, "thumbs_per_row", thumbs_per_row, "max_thumbs_per_page",max_thumbs_per_page);
 			
